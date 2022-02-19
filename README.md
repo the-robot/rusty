@@ -1,1 +1,1 @@
-- very minimal web server written in Rust from scratch
+- **server**: very minimal web server written in Rust from scratch
