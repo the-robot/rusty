@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "server"
+name = "http-library"
 version = "0.1.0"
