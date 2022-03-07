@@ -29,7 +29,6 @@ impl Error {
         match self {
             Error::Internal(_) => Status::InternalServerError,
             Error::NotFound(_) => Status::NotFound,
-            // bad request for invalid, and the rest
             _ => Status::BadRequest,
         }
     }
