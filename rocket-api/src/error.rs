@@ -21,9 +21,6 @@ pub enum Error {
 
     #[error("{0}")]
     BadRequest(String),
-
-    #[error("{0}")]
-    InvalidArgument(String),
 }
 
 // get HTTP status from error type
