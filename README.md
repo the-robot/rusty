@@ -1,1 +1,2 @@
 - **http-library**: very minimal web server written in Rust from scratch
+- **rocket-api**: simple demonstration of setting up api server in Rocket framework with proper http error handling
