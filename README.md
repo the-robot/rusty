@@ -1,1 +1,1 @@
-- **server**: very minimal web server written in Rust from scratch
+- **http-library**: very minimal web server written in Rust from scratch
