@@ -20,7 +20,11 @@ impl Service {
         Ok(records)
     }
 
-    pub fn get_records_error(&self) -> Result<Vec<Record>, Error> {
-        Err(Error::Internal("internal server error from get_records_error".to_string()))
+    pub fn internal_error(&self) -> Result<Vec<Record>, Error> {
+        Err(Error::Internal("internal server error from service".to_string()))
+    }
+
+    pub fn bad_request_error(&self) -> Result<Vec<Record>, Error> {
+        Err(Error::BadRequest("bad request error from service".to_string()))
     }
 }

@@ -6,6 +6,8 @@ mod routes;
 mod service;
 mod state;
 
+use routes::{get_records, get_internal_error, get_bad_request_error};
+
 #[launch]
 async fn rocket() -> _ {
     // setup app state
@@ -13,6 +15,6 @@ async fn rocket() -> _ {
     let app_state = state::AppState::new(service);
 
     rocket::build()
-    .mount("/", routes![routes::get_records, routes::get_records_error])
+    .mount("/", routes![get_records, get_internal_error, get_bad_request_error])
     .manage(app_state)
 }

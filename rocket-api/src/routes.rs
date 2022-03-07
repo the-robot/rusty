@@ -15,8 +15,15 @@ pub fn get_records(state: &State<AppState>) -> Result<Json<Records>, Error> {
 }
 
 #[get("/error")]
-pub fn get_records_error(state: &State<AppState>) -> Result<Json<Records>, Error> {
-    let records = state.service.get_records_error()?;
+pub fn get_internal_error(state: &State<AppState>) -> Result<Json<Records>, Error> {
+    let records = state.service.internal_error()?;
+    let response = Json(Records{records: records});
+    Ok(response)
+}
+
+#[get("/bad")]
+pub fn get_bad_request_error(state: &State<AppState>) -> Result<Json<Records>, Error> {
+    let records = state.service.bad_request_error()?;
     let response = Json(Records{records: records});
     Ok(response)
 }
